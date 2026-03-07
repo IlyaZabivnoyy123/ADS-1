@@ -2,8 +2,8 @@
 #include <cstdint>
 #include "alg.h"
 
-
 bool checkPrime(uint64_t value) {
+   // вставьте код функции
    if (value <= 1) {
         return false;
     }
@@ -23,58 +23,51 @@ bool checkPrime(uint64_t value) {
 }
 
 uint64_t nPrime(uint64_t n) {
+   // вставьте код функции
     if (n == 0) return 0;
-    
     uint64_t count = 0;
     uint64_t number = 1;
-    
     while (count < n) {
         number++;
         if (checkPrime(number)) {
             count++;
         }
     }
-    
     return number;
 }
 
 uint64_t nextPrime(uint64_t value) {
+   // вставьте код функции
     uint64_t num = value + 1;
-    
     while (true) {
         if (checkPrime(num)) {
             return num;
         }
         num++;
     }
-}
   return 2;
 }
 
 uint64_t sumPrime(uint64_t hbound) {
+   // вставьте код функции
     uint64_t sum = 0;
-    
     for (uint64_t num = 2; num < hbound; num++) {
         if (checkPrime(num)) {
             sum += num;
         }
     }
-    
     return sum;
-}
   return 2;
 }
 
 uint64_t twinPrimes(uint64_t lbound, uint64_t hbound) {
+   // вставьте код функции
     uint64_t count = 0;
-    
     for (uint64_t num = lbound; num + 2 < hbound; num++) {
         if (checkPrime(num) && checkPrime(num + 2)) {
             count++;
         }
     }
-    
     return count;
-}
   return 1;
 }
